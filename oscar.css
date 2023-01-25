@@ -1,0 +1,254 @@
+body,
+html {
+    font-family: 'Inconsolata', sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    width: 800px;
+    background-color: rgb(238, 234, 234);
+}
+
+.container {
+    position: relative;
+}
+
+.container1 {
+    
+    position: relative;
+    min-width: 402px;
+    max-width: 800px;
+}
+
+.container2 {
+    display: none;
+}
+
+.logo {
+    width: 50%;
+    float: left;
+    height: 166.28px;
+}
+
+.sante {
+    height: 163.17px;
+    position: absolute;
+    width: 50%;
+    float: right;
+    margin: 0;
+}
+
+.first {
+    margin: 0;
+    text-align: center;
+    color: white;
+    width: 50%;
+    background-color: rgba(5, 145, 145, 0.774);
+    float: right;
+    z-index: 100;
+    position: absolute;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    left: 50%;
+}
+
+.second {
+    margin: 0;
+    text-align: center;
+    color: white;
+    width: 50%;
+    background-color: rgba(5, 145, 145, 0.774);
+    float: right;
+    z-index: 100;
+    position: absolute;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    left: 50%;
+    top: 145.28px;
+}
+
+.third {
+    margin: 0;
+    text-align: center;
+    color: rgba(5, 145, 145, 0.774);
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.692);
+    font-weight: lighter;
+    z-index: 100;
+    position: absolute;
+    font-size: 28px;
+    bottom: 140px;
+}
+
+.inf {
+    margin-left: 4.5%;
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.information ul li {
+    margin-left: 10%;
+    font-size: 25px;
+}
+
+form {
+    font-size: 20px;
+    margin-left: 10%;
+}
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0px;
+}
+
+button {
+    
+    padding: 12px 10px;
+    border: 0;
+    background: rgb(5, 145, 145);
+    border-radius: 3px;
+    margin-top: 10px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+footer {
+    background-color: rgb(51, 57, 71);
+}
+
+.footer {
+    text-align: left;
+    margin: 9%;
+}
+
+h4 {
+    font-weight: normal;
+    color: rgb(253, 253, 251);
+}
+
+p {
+    color: rgb(253, 253, 251);
+}
+.ecoleosc{
+    width: 300px;
+}
+#center{
+    text-align: center;
+}
+
+@media only screen and (max-width: 800px) {
+    body,
+    html {
+        font-size: 25px;
+        margin: 0 auto;
+        width: 400px;
+        background-color: rgb(238, 234, 234);
+    }
+    .container2 {
+        display: block;
+    }
+    .container,
+    .container2 {
+        position: relative;
+    }
+    .container1 {
+        display: none;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: 400px;
+        grid-template-rows: 163.17px 163.17px;
+        padding: 0;
+        margin: 0;
+    }
+    .logo {
+        width: 100%;
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+    .sante {
+        position: absolute;
+        width: 100%;
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+    .first {
+        text-align: center;
+        color: white;
+        width: 100%;
+        background-color: rgba(5, 145, 145, 0.774);
+        float: left;
+        z-index: 100;
+        position: absolute;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        left: 0%;
+    }
+    .second {
+        text-align: center;
+        color: white;
+        width: 100%;
+        background-color: rgba(5, 145, 145, 0.774);
+        float: left;
+        z-index: 100;
+        position: absolute;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        left: 0%;
+        top: 305.56px;
+    }
+    .third {
+        text-align: center;
+        color: rgba(5, 145, 145, 0.774);
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.692);
+        font-weight: lighter;
+        z-index: 100;
+        position: absolute;
+        font-size: 22px;
+        bottom: 76px;
+    }
+    .inf {
+        margin-left: 4%;
+        font-size:80%;
+        font-weight: normal;
+    }
+    .information ul li {
+        margin-left: 5%;
+        font-size: 78%;
+    }
+    form {
+        font-size: 75%;
+        margin-left: 10%;
+    }
+    input[type=checkbox] {
+        margin: 10px 5px 10px 0px;
+        
+    }
+    button {
+        padding: 12px 10px;
+        border: 0;
+        background: rgb(5, 145, 145);
+        border-radius: 3px;
+        margin-top: 10px;
+        color: #fff;
+        letter-spacing: 1px;
+    }
+    footer {
+        background-color: rgb(51, 57, 71);
+        font-size: 55%;
+    }
+    .footer {
+        text-align: left;
+        margin: 9%;
+    }
+    h4 {
+        font-weight: normal;
+        color: rgb(253, 253, 251);
+    }
+    p {
+        color: rgb(253, 253, 251);
+    }
+    
+}

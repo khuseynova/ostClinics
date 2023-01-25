@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <title>WEB PROJECT UFAZ L1</title>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="vendors/normalize.css">
+    <link rel="stylesheet" type="text/css" href="vendors/grid.css">
+    <link rel="stylesheet" type="text/css" href="oscar.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">
+    <link href="recources/jq.css" rel="Stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $(".txtworkingdays").datepicker({
+
+                beforeShowDay: $.datepicker.noWeekends
+            });
+        });
+    </script>
+ 
+
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="grid">
+                <img src="recources/logoCliniqueOscar.jpg" alt="Clinique logo" class="logo">
+                <div class="img">
+                    <img src="recources/sante.jpg" class="sante" alt="Sante">
+                    <h3 class="first">CERTIFICATION</h3>
+                    <h3 class="second">PRENEZ RENDEZ-VOUS</h3>
+                </div>
+            </div>
+           
+            <div class="container1">
+                <img src="recources/osteoRDV800x168.jpg" class="osteo" alt="osteoRDV">
+                <div class="third">Réserver une consultation ostéopathique</div>
+                
+            </div>
+            <div class="container2">
+                <img src="recources/osteoRDV400x120.jpg" class="osteo1" alt="osteoRDV">
+                <div class="third">Réserver une consultation ostéopathique</div>
+                
+            </div>
+            <br>
+        </header>
+        <div class="information">
+            <h3 class="inf">Chaque consultation dure environ 45 minutes</h3>
+
+            <ul>
+                <li>15 € pour les enfants, les étudients et les tarifs reduits</li>
+                <li>20 € pour tarif adulte</li>
+                <li>60 € pour 6 séances</li>
+            </ul>
+
+            <h3 class="inf">En clinique les soins sont dispensés par nos étudiants encadrées par des <b>enseignants ostéopathes professionels</b>.
+            </h3>
+            <br>
+            <h3 class="inf">Merci de renseigner les champs ci-dessous</h3>
+        </div>
+        <br>
+    </div>
+
+    <div class="row">
+        <form method="POST" action="vendors/sendData.php" class="contact-form">
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <label for="name">Nom</label>
+                </div>
+
+                <div class="col span-2-of-3">
+                    <input type="text" name="name" id="name" required>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <label for="lname">Prenom</label>
+                </div>
+
+                <div class="col span-2-of-3">
+                    <input type="text" name="lname" id="lname" required>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <label for="telephone">Téléphone</label>
+                </div>
+
+                <div class="col span-2-of-3">
+                    <input type="tel" name="telephone" pattern="+994[0-9]{2}[0-9]{3}[0-9]{4}" placeholder="+994XXXXXXXXX" id="telephone" required>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <label for="email">Courriel</label>
+                </div>
+
+                <div class="col span-2-of-3">
+                    <input type="email" name="email" id="email" required>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <label for="date">Date RDV</label>
+                </div>
+
+                <div class="col span-2-of-3">
+                    <input class="txtworkingdays" type="text" name="date" id="date" required>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <label for="time">Heure RDV</label>
+                </div>
+
+                <div class="col span-2-of-3">
+                    <input type="time" name="time" id="time" min="09:00" max="17:00"  step= "3600" required>
+                </div>
+
+            </div>
+            <br>
+            <div class="row ">
+                <div class="col span-1-of-3 ">
+                    <label for="tarif">Tarif</label>
+                </div>
+
+                <div class="col span-2-of-3 ">
+                    <select name="tarif" id="tarif" required>
+                            <option value="">--Choir--</option>
+                            <option value="15 €" >15 €</option>
+                            <option value="20 €">20 €</option>
+                            <option value="60 € ">60 €</option>
+                            
+                        </select>
+                </div>
+
+            </div>
+            <br>
+            <input type="checkbox" name="accept " required>
+            <i>J'autorise la Clinique Oscar à utiliser mes coordonnées
+                uniquement pour me contacter et gérer mon rendez-vous.</i>
+
+
+
+
+            <div class="row ">
+
+                <div class="col span-2-of-3 ">
+                    <button>Prendre RDV</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+    <footer>
+        <div class="row ">
+            <div class="col span-1-of-2 " id="center">
+                <img src="recources/logoEcoleOscar.jpg " alt="EcoleOscar" class="ecoleosc">
+            </div>
+
+            <div class="col span-1-of-2 ">
+                <div class="footer ">
+                    <h4>ECOLE OSCAR</h4>
+                    <p>Campus Privé d'Alsace</p>
+                    <p>24a Rue des Magasins - 67000 Strasbourg</p>
+                    <p>Tel.: +33 (0)3 88 23 14 14 - info@ecoleoscar.com</p>
+                </div>
+
+
+            </div>
+        </div>
+
+    </footer>
+    
+</body>
+
+</html>
